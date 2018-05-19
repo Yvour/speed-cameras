@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import camera.CameraMessageProcessor;
 import camera.Message;
+import speed.SpeedAnalyser;
+import speed.SpeedClass;
 
 public class Servlet extends HttpServlet {
 	private static final long serialVersionUID = -4751096228274971485L;
@@ -22,41 +25,14 @@ public class Servlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-
-		BufferedReader reader = null;
-		StringBuilder sb = new StringBuilder();
-		String line;
-		try {
-			reader = req.getReader();
-			while ((line = reader.readLine()) != null) {
-				sb.append(line);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		} finally {
-			if (reader != null) {
-				try {
-					reader.close();
-
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		String body = sb.toString();
-		System.out.println("the String is " + body);;
-		ObjectMapper mapper = new ObjectMapper();
-		Message message = null;
-		try {
-			message = mapper.readValue(body, Message.class);
-		}
-		catch (Exception e) {
-			e.printStackTrace();
-			System.out.println(e.getMessage());
-		}
-		System.out.println("The speed gotten is " + message.getDetectedSpeed());
-
+		
+        Message message = CameraMessageProcessor.getMessage(req);
+        float speed = Float.parseFloat(message.getDetectedSpeed());
+        if (SpeedAnalyser.inspect(speed)!= SpeedClass.SAFE) {
+        	message.saveToDatabase()
+        }
+	
+	
 	}
 
 	@Override

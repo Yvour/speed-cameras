@@ -57,5 +57,9 @@ public class Message {
 	}
 	
 	
+	public void saveToDatabase() {
+		System.out.println("Speed is dangerous. Is to be saved");
+	}
+	
 	
 }
