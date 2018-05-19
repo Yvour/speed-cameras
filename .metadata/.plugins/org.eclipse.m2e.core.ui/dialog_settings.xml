@@ -40,9 +40,9 @@
 	<section name="MavenProjectWizardArchetypePage">
 		<item value="All Catalogs" key="catalog"/>
 		<list key="projectNameTemplate">
+			<item value="[artifactId]-[version]"/>
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
-			<item value="[artifactId]-[version]"/>
 			<item value="[groupId].[artifactId]"/>
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
@@ -53,9 +53,9 @@
 			<item value="/home/human/workspace/sender"/>
 		</list>
 		<list key="projectNameTemplate">
+			<item value="[artifactId]-[version]"/>
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
-			<item value="[artifactId]-[version]"/>
 			<item value="[groupId].[artifactId]"/>
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
@@ -64,6 +64,7 @@
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
 			<item value="sender"/>
+			<item value="sender.sender"/>
 		</list>
 		<list key="groupId">
 			<item value="sender"/>
@@ -72,9 +73,9 @@
 			<item value="sender"/>
 		</list>
 		<list key="projectNameTemplate">
+			<item value="[artifactId]-[version]"/>
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
-			<item value="[artifactId]-[version]"/>
 			<item value="[groupId].[artifactId]"/>
 			<item value="[groupId].[artifactId]-[version]"/>
 			<item value="[name]"/>
