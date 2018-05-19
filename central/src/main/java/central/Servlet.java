@@ -29,7 +29,7 @@ public class Servlet extends HttpServlet {
         Message message = CameraMessageProcessor.getMessage(req);
         float speed = Float.parseFloat(message.getDetectedSpeed());
         if (SpeedAnalyser.inspect(speed)!= SpeedClass.SAFE) {
-        	message.saveToDatabase()
+        	message.saveToDatabase();
         }
 	
 	

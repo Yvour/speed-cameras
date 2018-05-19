@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class DifferentGenerated {
+public class GenerationDifferenceTest {
 	private final int COUNT = 100;
 	private final int ALLOWED_COUNCIDENCE_COUNT = 1;
 
