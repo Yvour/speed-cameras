@@ -24,7 +24,7 @@ public class DifferentGenerated {
 		}
 				
 		if (equalCount > ALLOWED_COUNCIDENCE_COUNT) {		
-		fail("Speed values are not generated randomly");
+	     	fail("Speed values are not generated randomly");
 		}
 		
 	}
