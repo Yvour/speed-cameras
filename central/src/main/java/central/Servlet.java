@@ -45,8 +45,16 @@ public class Servlet extends HttpServlet {
 			}
 		}
 		String body = sb.toString();
+		System.out.println("the String is " + body);;
 		ObjectMapper mapper = new ObjectMapper();
-		Message message = mapper.readValue(body, Message.class);
+		Message message = null;
+		try {
+			message = mapper.readValue(body, Message.class);
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+		}
 		System.out.println("The speed gotten is " + message.getDetectedSpeed());
 
 	}

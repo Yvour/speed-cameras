@@ -1,11 +1,15 @@
 package camera;
 
 public class Message {
-	public final String cameraId;
-	public final String autoNumber;
-	public final String detectedSpeed;
-	public final String detectionTime;
-	public final String photo;
+	private  String cameraId;
+	private  String autoNumber;
+	private  String detectedSpeed;
+	private  String detectionTime;
+	private  String photo;
+	
+	public Message() {
+		// dummy constructor for Jackson
+	}
 
 	public Message(String cameraId, String autoNumber, String detectedSpeed,
 			String detectionTime, String photo) {
