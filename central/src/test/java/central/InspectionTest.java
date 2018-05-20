@@ -12,7 +12,7 @@ import speed.SpeedClass;
 public class InspectionTest {
 	private static String ALLOWED_VALUE_FIELD_NAME = "ALLOWED_LIMIT";
 	private static String DANGEROUS_VALUE_FIELD_NAME = "SUPER_DANGEROUS_VALUE";
-	private static float[] VERY_BIG_SPEED_VALUES = new float[] { 500, 700, 1000, 10000000 };
+	private static float[] VERY_BIG_SPEED_VALUES = new float[] { 500, 700, 1000, 10000000, 400000000 };
 
 	@Test
 	public void inspectorTest() {
@@ -97,9 +97,11 @@ public class InspectionTest {
 		// Maybe it is reasonable to classify very big values as unreal or as check
 		// needed values
 		for (int i = 0; i < VERY_BIG_SPEED_VALUES.length; i++) {
-			if (SpeedAnalyser.inspect(VERY_BIG_SPEED_VALUES[i]) == SpeedClass.SUPER_DANGEROUS) {
+			float veryBigValue = VERY_BIG_SPEED_VALUES[i];
+			SpeedClass classifier = SpeedAnalyser.inspect(veryBigValue);
+			if (classifier != SpeedClass.SUPER_DANGEROUS) {
 				fail("Very big speed value " + String.valueOf(VERY_BIG_SPEED_VALUES[i])
-						+ " should be classified as \"Super dangerous\"");
+						+ " should be classified as \"Super dangerous\" but was classifier as " + classifier.toString());
 			}
 
 		}
