@@ -19,11 +19,11 @@ public class InspectionTest {
 
 		Field allowedValueField = null;
 		Field dangerousValueField = null;
-		;
+		
 		try {
 			allowedValueField = SpeedAnalyser.class.getDeclaredField(ALLOWED_VALUE_FIELD_NAME);
 			allowedValueField.setAccessible(true);
-			;
+			
 		} catch (NoSuchFieldException e) {
 			fail("Class SpeedAnalyzer does not contain " + ALLOWED_VALUE_FIELD_NAME + " field");
 		}
@@ -52,7 +52,6 @@ public class InspectionTest {
 			try {
 				floatSuperDangerous = dangerousValueField.getFloat(null);
 			} catch (IllegalArgumentException | IllegalAccessException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 				fail(e.getMessage());
 			}
@@ -60,7 +59,7 @@ public class InspectionTest {
 		} else {
 			fail("Dangerous value is to be float");
 		}
-        // Checking the values and the classification given by class
+		// Checking the values and the classification given by class
 		if (!(floatAllowed > 0)) {
 			fail("Allowed value is to be positive");
 		}
@@ -89,9 +88,10 @@ public class InspectionTest {
 		}
 		for (int i = 1; i < 100; i++) {
 			float valueOverSuperDangerous = floatSuperDangerous + i;
-			SpeedClass classifier = SpeedAnalyser.inspect(valueOverSuperDangerous) ;
+			SpeedClass classifier = SpeedAnalyser.inspect(valueOverSuperDangerous);
 			if (classifier != SpeedClass.SUPER_DANGEROUS) {
-				fail("Speed value over super dangerous " + String.valueOf(valueOverSuperDangerous) + " should be classified as \"Super dangerous\". It classified as " + classifier.toString());
+				fail("Speed value over super dangerous " + String.valueOf(valueOverSuperDangerous)
+						+ " should be classified as \"Super dangerous\". It classified as " + classifier.toString());
 			}
 		}
 		// Maybe it is reasonable to classify very big values as unreal or as check
@@ -101,7 +101,8 @@ public class InspectionTest {
 			SpeedClass classifier = SpeedAnalyser.inspect(veryBigValue);
 			if (classifier != SpeedClass.SUPER_DANGEROUS) {
 				fail("Very big speed value " + String.valueOf(VERY_BIG_SPEED_VALUES[i])
-						+ " should be classified as \"Super dangerous\" but was classifier as " + classifier.toString());
+						+ " should be classified as \"Super dangerous\" but was classifier as "
+						+ classifier.toString());
 			}
 
 		}

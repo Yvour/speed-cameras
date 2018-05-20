@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class CameraMessageProcessor {
-	
+
 	private static String getPostRequestBody(HttpServletRequest req) {
 		BufferedReader reader = null;
 		StringBuilder sb = new StringBuilder();
@@ -32,24 +32,23 @@ public class CameraMessageProcessor {
 		}
 		return sb.toString();
 	}
-	
+
 	private static Message getMessageFromJSON(String json) {
 		ObjectMapper mapper = new ObjectMapper();
 		Message message = null;
 		try {
 			message = mapper.readValue(json, Message.class);
-		}
-		catch (Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-			}
+		}
 		return message;
-		
+
 	}
-	
+
 	public static Message getMessage(HttpServletRequest req) {
 		String body = getPostRequestBody(req);
 		return getMessageFromJSON(body);
-		
+
 	}
 
 }

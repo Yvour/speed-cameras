@@ -43,7 +43,7 @@ public class Servlet extends HttpServlet {
 		try {
 			Class.forName("org.sqlite.JDBC");
 			String tempDir = System.getProperty("java.io.tmpdir");
-			this.dao = new SQLiteMessageDAO("jdbc:sqlite:"+tempDir+"/cameras.db");
+			this.dao = new SQLiteMessageDAO("jdbc:sqlite:" + tempDir + "/cameras.db");
 			this.dao.installStorage();
 		} catch (Exception e) {
 

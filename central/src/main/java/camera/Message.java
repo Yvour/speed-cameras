@@ -1,18 +1,17 @@
 package camera;
 
 public class Message {
-	private  String cameraId;
-	private  String autoNumber;
-	private  String detectedSpeed;
-	private  String detectionTime;
-	private  String photo;
-	
+	private String cameraId;
+	private String autoNumber;
+	private String detectedSpeed;
+	private String detectionTime;
+	private String photo;
+
 	public Message() {
 		// dummy constructor for Jackson
 	}
 
-	public Message(String cameraId, String autoNumber, String detectedSpeed,
-			String detectionTime, String photo) {
+	public Message(String cameraId, String autoNumber, String detectedSpeed, String detectionTime, String photo) {
 		super();
 		this.cameraId = cameraId;
 		this.autoNumber = autoNumber;
@@ -55,11 +54,5 @@ public class Message {
 	public String getPhoto() {
 		return photo;
 	}
-	
-	
-	public void saveToDatabase() {
-		System.out.println("Speed is dangerous. Is to be saved");
-	}
-	
-	
+
 }

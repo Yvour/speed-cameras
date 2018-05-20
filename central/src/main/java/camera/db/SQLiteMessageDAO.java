@@ -8,17 +8,13 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class SQLiteMessageDAO implements MessageDAO {
+public class SQLiteMessageDAO {
 
 	private Connection getConnection(String url) {
 		Connection conn = null;
 		try {
-
-			// create a connection to the database
 			conn = DriverManager.getConnection(url);
-
 			System.out.println("Connection to SQLite has been established.");
-
 		} catch (SQLException e) {
 			System.out.println(e.getMessage());
 		}
