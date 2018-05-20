@@ -4,7 +4,7 @@ import camera.Message;
 
 public interface MessageDAO {
 
-	public static void saveMessage(Message message) {
+	public default void saveMessage(Message message) {
 		
 	}
 }

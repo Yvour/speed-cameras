@@ -2480,3 +2480,9 @@ org.eclipse.core.internal.resources.ResourceException: File not found: /home/hum
 
 !ENTRY org.eclipse.jface.text 2 0 2018-05-20 15:24:28.247
 !MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-20 15:29:26.081
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2018-05-20 15:29:26.222
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
