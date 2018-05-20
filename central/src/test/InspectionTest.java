@@ -1,8 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
+package central;
 
-import java.lang.reflect.Field;
+import static org.junit.Assert.*;
 
-import org.junit.jupiter.api.Test;
 
 import speed.SpeedAnalyser;
 import speed.SpeedClass;
@@ -10,7 +9,7 @@ import speed.SpeedClass;
 class InspectionTest {
 
 	@Test
-	void test() {
+	void inspectorTest() {
 		
 		Field allowed = null;
 		Field superDangerous = null;

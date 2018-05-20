@@ -9,7 +9,8 @@ public class GenerationDifferenceTest {
 	private final int ALLOWED_COUNCIDENCE_COUNT = 1;
 
 	@Test
-	public void test() {
+	public void mainTest() {
+		System.out.println("the test is running");
 
 		DataSet[] arr = new DataSet[COUNT];
 		for (int i = 0; i< arr.length; i ++) {
@@ -26,7 +27,7 @@ public class GenerationDifferenceTest {
 		if (equalCount > ALLOWED_COUNCIDENCE_COUNT) {		
 	     	fail("Speed values are not generated randomly");
 		}
-		
+	    assert(true);
 	}
 
 }

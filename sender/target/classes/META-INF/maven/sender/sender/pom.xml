@@ -7,7 +7,7 @@
 
 	<version>1</version>
 	<packaging>jar</packaging>
-	<name>central</name>
+	<name>sender</name>
 
 
 	<dependencies>
@@ -17,6 +17,11 @@
 			<version>2.1.2</version>
 			<scope>compile</scope>
 		</dependency>
+		<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
 
 	</dependencies>
 
