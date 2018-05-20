@@ -33,17 +33,23 @@ public class CameraMessageProcessor {
 		return sb.toString();
 	}
 	
-	public static Message getMessage(HttpServletRequest req) {
-		String body = getPostRequestBody(req);
+	private static Message getMessageFromJSON(String json) {
 		ObjectMapper mapper = new ObjectMapper();
 		Message message = null;
 		try {
-			message = mapper.readValue(body, Message.class);
+			message = mapper.readValue(json, Message.class);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			}
 		return message;
+		
+	}
+	
+	public static Message getMessage(HttpServletRequest req) {
+		String body = getPostRequestBody(req);
+		return getMessageFromJSON(body);
+		
 	}
 
 }
