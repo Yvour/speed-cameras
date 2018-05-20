@@ -12,6 +12,6 @@
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Field"/>
 <fullyQualifiedTypeName name="camera.Message"/>
-<fullyQualifiedTypeName name="camera.db.SQLiteMessageDAO"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+<fullyQualifiedTypeName name="camera.db.SQLiteMessageDAO"/>
 </qualifiedTypeNameHistroy>

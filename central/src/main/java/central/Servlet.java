@@ -42,7 +42,8 @@ public class Servlet extends HttpServlet {
 		System.out.println("Servlet " + this.getServletName() + " has started");
 		try {
 			Class.forName("org.sqlite.JDBC");
-			this.dao = new SQLiteMessageDAO("jdbc:sqlite:/tmp/cameras.db");
+			String tempDir = System.getProperty("java.io.tmpdir");
+			this.dao = new SQLiteMessageDAO("jdbc:sqlite:"+tempDir+"/cameras.db");
 			this.dao.installStorage();
 		} catch (Exception e) {
 
