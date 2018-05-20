@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: central.InspectionTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.215 sec <<< FAILURE! - in central.InspectionTest
+inspectorTest(central.InspectionTest)  Time elapsed: 0.034 sec  <<< FAILURE!
+java.lang.AssertionError: Very big speed value 500.0 should be classified as "Super dangerous"
+	at org.junit.Assert.fail(Assert.java:88)
+	at central.InspectionTest.inspectorTest(InspectionTest.java:101)
+

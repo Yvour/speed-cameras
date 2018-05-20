@@ -14,3 +14,6 @@
 1526758751681	Move file
 1526801202828	Copy compilation unit
 1526801217321	Delete element
+1526803287456	Move compilation unit
+1526803636059	Rename local variable 'allowed'
+1526803686233	Rename local variable 'dangerousValueField'

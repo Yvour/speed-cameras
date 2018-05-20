@@ -2,8 +2,8 @@ package speed;
 
 public class SpeedAnalyser {
 
-	private static final float ALLOWED_LIMIT = 60;
-	private static final float SUPER_DANGEROUS_VALUE = 13;
+	private static final float ALLOWED_LIMIT = (float) 60.00;
+	private static final float SUPER_DANGEROUS_VALUE = (float) 130.00;
 
 	public static SpeedClass inspect(float speed) {
 		if (speed <= ALLOWED_LIMIT)
