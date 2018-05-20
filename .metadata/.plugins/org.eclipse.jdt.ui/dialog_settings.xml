@@ -43,6 +43,8 @@
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
 	</section>
+	<section name="RenameInformationPopup">
+	</section>
 	<section name="ClasspathContainerSelectionPage">
 		<item value="3" key="index"/>
 	</section>
